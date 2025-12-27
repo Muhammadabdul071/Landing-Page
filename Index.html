@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Landing Page</title>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-gray-800 text-white">
+    <nav class="container mx-auto flex items-center justify-between h-16 px-6">
+      <div class="text-2xl font-bold">MySite</div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-4">
+        <a href="#" class="px-4 py-2 rounded-lg hover:bg-gray-700 transition">Menu</a>
+        <a href="#" class="px-4 py-2 rounded-lg hover:bg-gray-700 transition">Service</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="p-2 rounded-lg hover:bg-gray-700 transition">
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col px-6 pb-4 md:hidden bg-gray-800">
+      <a href="#" class="py-2 hover:bg-gray-700 rounded-lg transition">Menu</a>
+      <a href="#" class="py-2 hover:bg-gray-700 rounded-lg transition">Service</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex items-center justify-center min-h-screen px-6">
+    <div class="text-center max-w-2xl">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">Welcome to Our Service</h1>
+      <p class="text-gray-600 text-lg md:text-xl mb-8">We provide the best solutions for your business needs. Explore our dashboard and manage users easily.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="try1.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400">Go to Dashboard</a>
+        <a href="user.html" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-400">Manage Users</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  
+</body>
+</html>
